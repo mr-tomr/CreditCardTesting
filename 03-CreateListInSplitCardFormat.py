@@ -17,8 +17,8 @@ def format_numbers(input_file, output_file):
         # Split the number into groups of 4 digits
         groups = [number[i:i+4] for i in range(0, len(number), 4)]
 
-        # Join the groups with spaces, except the last group
-        formatted_number = " ".join(groups[:-1]) + groups[-1]
+        # Join the groups with spaces, including the last group
+        formatted_number = " ".join(groups)
 
         formatted_numbers.append(formatted_number)
 
@@ -30,3 +30,4 @@ if __name__ == "__main__":
     output_file = "formatted_numbers.txt"  # Replace with your output file path
 
     format_numbers(input_file, output_file)
+
